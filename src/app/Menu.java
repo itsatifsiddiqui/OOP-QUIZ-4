@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class Menu extends JFrame {
 
@@ -29,6 +30,7 @@ public class Menu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 System.out.println("ADD");
+                new StudentForm(true);
 
             }
         });
@@ -37,8 +39,7 @@ public class Menu extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Search");
-
+                new StudentForm(false);
             }
         });
     }

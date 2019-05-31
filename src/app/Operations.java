@@ -23,7 +23,7 @@ public class Operations {
         ObjectInputStream inputStream = null;
         try {
             // open file for reading
-            inputStream = new ObjectInputStream(new FileInputStream("List.ser"));
+            inputStream = new ObjectInputStream(new FileInputStream("students.ser"));
             // End Of File flag
             boolean EOF = false;
             // Keep reading file until file ends
@@ -65,12 +65,7 @@ public class Operations {
         ObjectOutputStream outputStream = null;
 
         try {
-            // Read old objects
-
-            // Append new object into existing list
-
-            // Open Stream for writing
-            outputStream = new ObjectOutputStream(new FileOutputStream("List.ser"));
+            outputStream = new ObjectOutputStream(new FileOutputStream("students.ser"));
 
             // Write all objects (old and new one) into the file
             for (int i = 0; i < StudentList.size(); i++) {
